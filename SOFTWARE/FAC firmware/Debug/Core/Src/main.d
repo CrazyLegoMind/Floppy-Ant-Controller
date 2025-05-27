@@ -32,10 +32,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
  ../Core/Inc/reciever.h ../Core/Inc/main.h ../Core/Inc/motor.h \
- ../Core/Inc/DMApwm.h ../Core/Inc/servo.h ../Core/Inc/settings.h \
- ../Core/Inc/battery.h ../USB_DEVICE/App/usb_device.h \
+ ../Core/Inc/DMApwm.h ../Core/Inc/DMAadc.h ../Core/Inc/servo.h \
+ ../Core/Inc/settings.h ../Core/Inc/battery.h \
+ ../USB_DEVICE/App/usb_device.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- ../USB_DEVICE/Target/usbd_conf.h
+ ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/DMAadc.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
 ../Core/Inc/stm32f0xx_hal_conf.h:
@@ -73,9 +74,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/main.h:
 ../Core/Inc/motor.h:
 ../Core/Inc/DMApwm.h:
+../Core/Inc/DMAadc.h:
 ../Core/Inc/servo.h:
 ../Core/Inc/settings.h:
 ../Core/Inc/battery.h:
 ../USB_DEVICE/App/usb_device.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 ../USB_DEVICE/Target/usbd_conf.h:
+../Core/Inc/DMAadc.h:

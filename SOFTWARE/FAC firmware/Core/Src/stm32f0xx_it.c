@@ -56,6 +56,7 @@
 
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_FS;
+extern DMA_HandleTypeDef hdma_adc;
 extern DMA_HandleTypeDef hdma_tim1_ch3_up;
 extern DMA_HandleTypeDef hdma_tim3_ch4_up;
 /* USER CODE BEGIN EV */
@@ -170,6 +171,20 @@ void EXTI2_3_IRQHandler(void)
   /* USER CODE BEGIN EXTI2_3_IRQn 1 */
 
   /* USER CODE END EXTI2_3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 channel 1 global interrupt.
+  */
+void DMA1_Channel1_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel1_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_adc);
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+
+  /* USER CODE END DMA1_Channel1_IRQn 1 */
 }
 
 /**

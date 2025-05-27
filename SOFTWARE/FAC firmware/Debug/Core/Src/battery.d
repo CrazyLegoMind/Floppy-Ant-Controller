@@ -1,4 +1,5 @@
 Core/Src/battery.o: ../Core/Src/battery.c ../Core/Inc/battery.h \
+ ../Core/Inc/DMAadc.h ../Core/Inc/main.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  ../Core/Inc/stm32f0xx_hal_conf.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
@@ -30,8 +31,12 @@ Core/Src/battery.o: ../Core/Src/battery.c ../Core/Inc/battery.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
- ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
+ ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
+ ../Core/Inc/reciever.h ../Core/Inc/motor.h ../Core/Inc/DMApwm.h \
+ ../Core/Inc/servo.h ../Core/Inc/settings.h ../Core/Inc/battery.h
 ../Core/Inc/battery.h:
+../Core/Inc/DMAadc.h:
+../Core/Inc/main.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
 ../Core/Inc/stm32f0xx_hal_conf.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:
@@ -64,3 +69,9 @@ Core/Src/battery.o: ../Core/Src/battery.c ../Core/Inc/battery.h \
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h:
+../Core/Inc/reciever.h:
+../Core/Inc/motor.h:
+../Core/Inc/DMApwm.h:
+../Core/Inc/servo.h:
+../Core/Inc/settings.h:
+../Core/Inc/battery.h:

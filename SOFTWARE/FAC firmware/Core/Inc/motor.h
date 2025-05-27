@@ -10,6 +10,7 @@
 
 #include "main.h"
 #include "DMApwm.h"
+#include "DMAadc.h"
 
 typedef struct TankMotors {
 	int16_t speedL;		// 0-100%	// 50% middle
@@ -24,10 +25,10 @@ void disableMotor(uint8_t motorN);
 void enableMotor(uint8_t motorN);
 void setMotorSpeedUnidirectional(uint8_t motorN, int16_t speed);
 void setMotorSpeedBidirectional(uint8_t motorN, int16_t speed);
+void motSeekPot(uint8_t motorN, uint16_t target ,uint8_t pot_ch);
 void setDriverBrake(uint8_t motorN);
 void setDriverSignals(uint8_t motorN, int16_t sp, uint8_t dir);
 int16_t calculateSpeedWithDeadZoneSingle(int16_t speed);
 int16_t calculateSpeedWithDeadZoneDouble(int16_t speed);
 void makeSound(uint8_t motorN, uint8_t duration);
-
 #endif /* INC_MOTOR_H_ */

@@ -32,8 +32,8 @@ Core/Src/motor.o: ../Core/Src/motor.c ../Core/Inc/motor.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
  ../Core/Inc/reciever.h ../Core/Inc/motor.h ../Core/Inc/servo.h \
- ../Core/Inc/settings.h ../Core/Inc/battery.h ../Core/Inc/DMApwm.h \
- ../Core/Inc/DMApwm.h
+ ../Core/Inc/settings.h ../Core/Inc/battery.h ../Core/Inc/DMAadc.h \
+ ../Core/Inc/DMApwm.h ../Core/Inc/DMApwm.h
 ../Core/Inc/motor.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
@@ -73,5 +73,6 @@ Core/Src/motor.o: ../Core/Src/motor.c ../Core/Inc/motor.h \
 ../Core/Inc/servo.h:
 ../Core/Inc/settings.h:
 ../Core/Inc/battery.h:
+../Core/Inc/DMAadc.h:
 ../Core/Inc/DMApwm.h:
 ../Core/Inc/DMApwm.h:

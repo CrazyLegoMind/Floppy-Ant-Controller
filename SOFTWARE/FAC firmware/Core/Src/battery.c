@@ -7,11 +7,9 @@
 
 #include "battery.h"
 
-extern ADC_HandleTypeDef hadc;
 
 void initBattery() {
-	HAL_ADC_Init(&hadc);
-	getADCValue(BATTERY_CHANNEL);	// make the first conversion because it always returns 0
+	;	// make the first conversion because it always returns 0
 }
 
 /* return: 	- 1 if 1S
@@ -25,19 +23,11 @@ uint8_t getBatteryConfiguration() {
 	return 0;
 }
 
-uint16_t getADCValue(uint8_t channel) {
-	uint16_t adc;
-	HAL_ADC_Start(&hadc);
-	adc = HAL_ADC_GetValue(&hadc);
-	HAL_ADC_Stop(&hadc);
-	return adc;
-}
-
 uint16_t getBattVoltage() {
 	const uint32_t vref = 3300000;		// 3.3V in uV to make the result an integer
 	const uint32_t adcRes = 4096;		// 12 bit resolution
 	const uint32_t dividerRatio = 3;	// voltage divider in the circuit is 1/3
-	uint32_t adc = getADCValue(BATTERY_CHANNEL);
+	uint32_t adc = DMAadcGetch(BATTERY_CHANNEL);
 	uint32_t vbat = ((vref / adcRes) * adc * dividerRatio) / 1000;	// /1000 to have the value in mV
 	return vbat + COMPENSATION_VALUE;
 }

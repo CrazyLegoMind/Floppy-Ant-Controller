@@ -8,7 +8,7 @@
 #ifndef INC_BATTERY_H_
 #define INC_BATTERY_H_
 
-#include "stm32f0xx_hal.h"
+#include "DMAadc.h"
 
 #define BATTERY_CHANNEL 0
 #define ADC1_CHANNEL 1
@@ -23,7 +23,6 @@
 #define MAX_2S_VOLTAGE MAX_1S_VOLTAGE*2
 
 void initBattery();
-uint16_t getADCValue(uint8_t channel);
 uint16_t getBattVoltage();
 uint8_t getBatteryConfiguration();
 

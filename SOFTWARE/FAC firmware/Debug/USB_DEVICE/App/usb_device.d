@@ -35,8 +35,8 @@ USB_DEVICE/App/usb_device.o: ../USB_DEVICE/App/usb_device.c \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/main.h \
  ../Core/Inc/reciever.h ../Core/Inc/main.h ../Core/Inc/motor.h \
- ../Core/Inc/DMApwm.h ../Core/Inc/servo.h ../Core/Inc/settings.h \
- ../Core/Inc/battery.h \
+ ../Core/Inc/DMApwm.h ../Core/Inc/DMAadc.h ../Core/Inc/servo.h \
+ ../Core/Inc/settings.h ../Core/Inc/battery.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
@@ -86,6 +86,7 @@ USB_DEVICE/App/usb_device.o: ../USB_DEVICE/App/usb_device.c \
 ../Core/Inc/main.h:
 ../Core/Inc/motor.h:
 ../Core/Inc/DMApwm.h:
+../Core/Inc/DMAadc.h:
 ../Core/Inc/servo.h:
 ../Core/Inc/settings.h:
 ../Core/Inc/battery.h:

@@ -1,0 +1,4 @@
+../Core/Src/DMAadc.c:16:6:initDMAadc	1
+../Core/Src/DMAadc.c:22:6:DMAadcUpdate	1
+../Core/Src/DMAadc.c:26:10:DMAadcGetch	1
+../Core/Src/DMAadc.c:30:6:HAL_ADC_ConvCpltCallback	1

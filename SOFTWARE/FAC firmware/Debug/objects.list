@@ -1,3 +1,4 @@
+"./Core/Src/DMAadc.o"
 "./Core/Src/DMApwm.o"
 "./Core/Src/battery.o"
 "./Core/Src/main.o"
