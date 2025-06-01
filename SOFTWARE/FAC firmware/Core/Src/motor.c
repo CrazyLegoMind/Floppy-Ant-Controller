@@ -98,7 +98,7 @@ void motSeekPot(uint8_t motorN, uint16_t target_pos, uint8_t pot_ch) {
 		setDriverBrake(motorN);
 		return;
 	}
-	target_pos = map(target_pos, 2000, 4000, 0, 4095);
+	target_pos = map(target_pos, 1000, 2000, 0, 4095);
 	if (target_pos > 4095)
 		target_pos = 4095;
 	if (target_pos < 0)
@@ -127,9 +127,7 @@ void motSeekPot(uint8_t motorN, uint16_t target_pos, uint8_t pot_ch) {
 		speed = MAX_DMA_PWM_VALUE;
 	if (speed < -MAX_DMA_PWM_VALUE)
 		speed = -MAX_DMA_PWM_VALUE;
-	uint8_t string[30];
-		sprintf(string, "x =  %d\n", speed );
-		serialPrintString(string);
+
 	prev_error = pid_error;
 	uint16_t sp = abs(speed);
 	sp = map(sp, 0, speed_steps, 0, MAX_DMA_PWM_VALUE);

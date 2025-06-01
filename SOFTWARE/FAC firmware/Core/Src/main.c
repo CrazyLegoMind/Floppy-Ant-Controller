@@ -220,6 +220,14 @@ int main(void) {
 
 		if (!cutoff) {	// if the robot is not in cutoff
 			// arm/disarm robot
+			/*uint8_t string[30];
+			sprintf(string, "%d %d %d %d  \n",
+					reciever_channels[1],
+					reciever_channels[2],
+					reciever_channels[3],
+					reciever_channels[4]);
+			serialPrintString(string);
+			//*/
 			if (!noDisarm) {
 				if (getChannelValuePercentage(armChannel) > 75)
 					armed = TRUE;
@@ -347,7 +355,7 @@ int main(void) {
 			disableMotor(M2);
 			disableMotor(M3);
 			// turn of the servos signals
-			setServoAngle(S1, 0);	// servo 1 attached to channel s1Channel
+			setServoAngle(S1, 0);		// servo 1 attached to channel s1Channel
 			setServoAngle(S2, 0);
 			if (HAL_GetTick() - time1 >= 100) {
 				// led indicator

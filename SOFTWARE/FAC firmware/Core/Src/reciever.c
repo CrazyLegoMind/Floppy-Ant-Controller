@@ -30,7 +30,7 @@ void initReciever(TIM_HandleTypeDef *htim) {
 	HAL_TIM_Base_Start(htim);
 }
 
-uint8_t aligned = 0;
+uint8_t aligned = 1;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 	if (recieverIsPWM) {
@@ -49,17 +49,17 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 			// channel 2 (only falling, because it starts with ch1)
 			if (GPIO_Pin == CH2_Pin) {
 				usWidth = __HAL_TIM_GET_COUNTER(&htim6);
-				reciever_channels[2] = usWidth;
+				reciever_channels[2] = usWidth/2;
 			}
 			// channel 3 (only falling, because it starts with ch1)
 			if (GPIO_Pin == CH3_Pin) {
 				usWidth = __HAL_TIM_GET_COUNTER(&htim6);
-				reciever_channels[3] = usWidth;
+				reciever_channels[3] = usWidth/2;
 			}
 			// channel 4 (only falling, because it starts with ch1)
 			if (GPIO_Pin == CH4_Pin) {
 				usWidth = __HAL_TIM_GET_COUNTER(&htim6);
-				reciever_channels[4] = usWidth;
+				reciever_channels[4] = usWidth/2;
 			}
 		} else {	// not aligned, subtract channel 1 time from ch2 time etc.
 			// channel 2 (only falling, because it starts after ch1)
